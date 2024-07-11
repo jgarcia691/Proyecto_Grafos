@@ -1,13 +1,13 @@
 from neo4j import GraphDatabase
 
 # Configura las credenciales y la URL de conexión
-uri = "bolt://localhost:7687"  # Cambia esto a la URI de tu base de datos
-user = "neo4j"                 # Nombre de usuario de tu base de datos
-password = "123456789"          # Contraseña de tu base de datos
-database = "arbol"  # Nombre de la base de datos
+uri = "neo4j+s://a5ac4c2f.databases.neo4j.io"  
+username = "neo4j"         
+password = "x7EeQjQkiG1Xb5-awXNsujQcry97KFSYN8RSFP5kjsU"
+database = "neo4j"  # Nombre de la base de datos
 
 # Crea una instancia del controlador
-driver = GraphDatabase.driver(uri, auth=(user, password))
+driver = GraphDatabase.driver(uri, auth=(username, password))
 
 # Función para ejecutar una consulta y devolver los resultados
 def execute_query(query, database, parameters=None):
